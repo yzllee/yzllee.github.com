@@ -16,7 +16,7 @@ body{
   height: 100%;
   overflow: hidden;
   visibility: visible;
-  background: #666 url('http://tu.ihuan.me/api/bing/go') no-repeat fixed center;
+  background: #666 url('https://tu.ihuan.me/api/bing/go') no-repeat fixed center;
   display: -webkit-flex;
   display: flex;
 }
