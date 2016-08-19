@@ -18,6 +18,10 @@ body{
   visibility: visible;
   background: #666 url('http://tu.ihuan.me/api/bing/go') no-repeat fixed center;
   background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
   display: -webkit-flex;
   display: flex;
 }
