@@ -1,3 +1,3 @@
 # MYONLINE
 
-－首页模版取自（  https://github.com/livoras/home/blob/gh-pages/gen.js  ）。
+－首页动态文字取自（  https://github.com/livoras/home/blob/gh-pages/gen.js  ）。
