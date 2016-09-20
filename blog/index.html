@@ -20,6 +20,8 @@
   
   <link rel="stylesheet" href="/blog/css/style.css">
   <script src="/blog/js/jquery-3.0.0.min.js"></script>
+  <script src="/blog/js/pc.js"></script>
+  <script src="/blog/js/mobile.js"></script>
 
 </head>
 
@@ -88,6 +90,8 @@
 				        
 							<li><a href="/blog/archives">所有文章</a></li>
 				        
+							<li><a href="/blog/categories/随笔">随笔</a></li>
+				        
 						</ul>
 					</nav>
 					<nav class="header-nav">
@@ -128,7 +132,7 @@
       <nav id="mobile-nav">
   	<div class="overlay">
   		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">Lyn</h1>
+  		<h1 class="header-author js-mobile-header fixed">Lyn</h1>
   	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
@@ -150,6 +154,8 @@
 		        
 					<li><a href="/blog/archives">所有文章</a></li>
 		        
+					<li><a href="/blog/categories/随笔">随笔</a></li>
+		        
 		        <div class="clearfix"></div>
 				</ul>
 			</nav>
@@ -168,54 +174,59 @@
 
       <div class="body-wrap">
   
-    <article id="post-nicescroll" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    <article id="post-nicescroll" class="article article-type-post" itemscope
+         itemprop="blogPost">
+    
     <div class="article-meta">
-      <a href="/blog/2016/09/11/nicescroll/" class="article-date">
+        <a href="/blog/2016/09/11/nicescroll/" class="article-date">
   	<time datetime="2016-09-11T11:40:02.000Z" itemprop="datePublished">2016-09-11</time>
 </a>
     </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <div class="article-inner">
         
+        <input type="hidden" class="isFancy"/>
+        
+        
+        <header class="article-header">
+            
   
     <h1 itemprop="name">
       <a class="article-title" href="/blog/2016/09/11/nicescroll/">使用nicescroll自定义滚动条</a>
     </h1>
   
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Nicescroll 是一个 jquery 插件,支持 Div、 Iframe、 文本区域、 和文档页 (身体) 滚动条。</p>
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p>Nicescroll 是一个 jquery 插件,支持 Div、 Iframe、 文本区域、 和文档页 (身体) 滚动条。</p>
 <p>浏览器兼容：火狐 4 +，Chrome 5 + Safari 4 + (win/mac)，Opera 10 + IE 6+。（所有<br>A 级浏览器)。</p>
 <p>移动设备兼容： iPad，Iphone、 Android 2.2 +，黑莓手机与 Playbook （WebWorks/表 OS）、<br>Windows Phone 7.5 芒果和 Windows Phone 8。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$(<span class="string">"#thisdiv"</span>).niceScroll(&#123;</div><div class="line"></div><div class="line">      cursorcolor: <span class="string">"#424242"</span>, 	<span class="comment">// 改变滚动条颜色，使用16进制颜色值</span></div><div class="line"></div><div class="line">      cursoropacitymin: <span class="number">0</span>,	 <span class="comment">// 当滚动条是隐藏状态时改变透明度, 值范围 1 到 0</span></div><div class="line"></div><div class="line">      cursoropacitymax: <span class="number">1</span>,	 <span class="comment">// 当滚动条是显示状态时改变透明度, 值范围 1 到 0</span></div><div class="line"></div><div class="line">      cursorwidth: <span class="string">"5px"</span>,		<span class="comment">// 滚动条的宽度，单位：便素</span></div><div class="line"></div><div class="line">      cursorborder: <span class="string">"1px solid #fff"</span>, 	<span class="comment">// CSS方式定义滚动条边框</span></div><div class="line"></div><div class="line">      cursorborderradius: <span class="string">"5px"</span>, 	<span class="comment">// 滚动条圆角（像素）</span></div><div class="line"></div><div class="line">      zindex: <span class="string">"auto"</span>, 	<span class="comment">// 改变滚动条的DIV的z-index值</span></div><div class="line"></div><div class="line">      scrollspeed: <span class="number">60</span>, 	<span class="comment">// 滚动速度</span></div><div class="line"></div><div class="line">      mousescrollstep: <span class="number">40</span>,	 <span class="comment">// 鼠标滚轮的滚动速度 (像素)</span></div><div class="line"></div><div class="line">      touchbehavior: <span class="literal">false</span>, 	<span class="comment">// 激活拖拽滚动</span></div><div class="line"></div><div class="line">      hwacceleration: <span class="literal">true</span>, 	<span class="comment">// 激活硬件加速</span></div><div class="line"></div><div class="line">      boxzoom: <span class="literal">false</span>, 	<span class="comment">// 激活放大box的内容</span></div><div class="line"></div><div class="line">      dblclickzoom: <span class="literal">true</span>, 	<span class="comment">// (仅当 boxzoom=true时有效)双击box时放大</span></div><div class="line"></div><div class="line">      gesturezoom: <span class="literal">true</span>, 		<span class="comment">// (仅 boxzoom=true 和触屏设备时有效) 激活变焦当out/in（两个手指外张或收缩）</span></div><div class="line"></div><div class="line">      grabcursorenabled: <span class="literal">true</span>		<span class="comment">// (仅当 touchbehavior=true) 显示“抓住”图标display "grab" icon</span></div><div class="line"></div><div class="line">      autohidemode: <span class="literal">true</span>,		 <span class="comment">// 隐藏滚动条的方式, false 不隐藏,</span></div><div class="line">      <span class="comment">//cursor 	鼠标进入隐藏,</span></div><div class="line">      <span class="comment">//leave		仅在指针离开内容时隐藏,</span></div><div class="line">      <span class="comment">//hidden	一直隐藏,</span></div><div class="line">      <span class="comment">//scroll	仅在滚动时显示</span></div><div class="line"></div><div class="line">      background: <span class="string">""</span>,		 <span class="comment">// 轨道的背景颜色</span></div><div class="line"></div><div class="line">      iframeautoresize: <span class="literal">true</span>, 	<span class="comment">// 在加载事件时自动重置iframe大小</span></div><div class="line"></div><div class="line">      cursorminheight: <span class="number">32</span>, 	<span class="comment">// 设置滚动条的最小高度 (像素)</span></div><div class="line"></div><div class="line">      preservenativescrolling: <span class="literal">true</span>, 		<span class="comment">// 你可以用鼠标滚动可滚动区域的滚动条和增加鼠标滚轮事件</span></div><div class="line"></div><div class="line">      railoffset: <span class="literal">false</span>, 		<span class="comment">// 可以使用top/left来修正位置</span></div><div class="line"></div><div class="line">      bouncescroll: <span class="literal">false</span>,	 <span class="comment">// (only hw accell) 启用滚动跳跃的内容移动</span></div><div class="line"></div><div class="line">      spacebarenabled: <span class="literal">true</span>,	 <span class="comment">// 当按下空格时使页面向下滚动</span></div><div class="line"></div><div class="line">      railpadding: &#123; top: <span class="number">0</span>, right: <span class="number">0</span>, left: <span class="number">0</span>, bottom: <span class="number">0</span> &#125;,	 <span class="comment">// 设置轨道的内间距</span></div><div class="line"></div><div class="line">      disableoutline: <span class="literal">true</span>,	 <span class="comment">// 当选中一个使用nicescroll的div时，chrome浏览器中禁用outline</span></div><div class="line"></div><div class="line">      horizrailenabled: <span class="literal">true</span>,		 <span class="comment">// nicescroll可以管理水平滚动</span></div><div class="line"></div><div class="line">      railalign: right, 	<span class="comment">// 对齐垂直轨道</span></div><div class="line"></div><div class="line">      railvalign: bottom, 	<span class="comment">// 对齐水平轨道</span></div><div class="line"></div><div class="line">      enabletranslate3d: <span class="literal">true</span>, 	<span class="comment">// nicescroll 可以使用CSS变型来滚动内容</span></div><div class="line"></div><div class="line">      enablemousewheel: <span class="literal">true</span>,		 <span class="comment">// nicescroll可以管理鼠标滚轮事件</span></div><div class="line"></div><div class="line">      enablekeyboard: <span class="literal">true</span>,		 <span class="comment">// nicescroll可以管理键盘事件</span></div><div class="line"></div><div class="line">      smoothscroll: <span class="literal">true</span>, 		<span class="comment">// ease动画滚动</span></div><div class="line"></div><div class="line">      sensitiverail: <span class="literal">true</span>, 		<span class="comment">// 单击轨道产生滚动</span></div><div class="line"></div><div class="line">      enablemouselockapi: <span class="literal">true</span>,	<span class="comment">// 可以用鼠标锁定API标题 (类似对象拖动)</span></div><div class="line"></div><div class="line">      cursorfixedheight: <span class="literal">false</span>, 	<span class="comment">// 修正光标的高度（像素）</span></div><div class="line"></div><div class="line">      hidecursordelay: <span class="number">400</span>, 		<span class="comment">// 设置滚动条淡出的延迟时间（毫秒）</span></div><div class="line"></div><div class="line">      directionlockdeadzone: <span class="number">6</span>, 	<span class="comment">// 设定死区，为激活方向锁定（像素）</span></div><div class="line"></div><div class="line">      nativeparentscrolling: <span class="literal">true</span>, 	<span class="comment">// 检测内容底部便于让父级滚动</span></div><div class="line"></div><div class="line">      enablescrollonselection: <span class="literal">true</span>, 	<span class="comment">// 当选择文本时激活内容自动滚动</span></div><div class="line"></div><div class="line">      cursordragspeed: <span class="number">0.3</span>, 		<span class="comment">// 设置拖拽的速度</span></div><div class="line"></div><div class="line">      rtlmode: <span class="string">"auto"</span>,	 <span class="comment">// DIV的水平滚动从左边开始</span></div><div class="line"></div><div class="line">      cursordragontouch: <span class="literal">false</span>, 	<span class="comment">// 使用触屏模式来实现拖拽</span></div><div class="line"></div><div class="line">      oneaxismousemode: <span class="string">"auto"</span>, 	<span class="comment">// 当只有水平滚动时可以用鼠标滚轮来滚动，如果设为false则不支持水平滚动，如果设为auto支持双轴滚动</span></div><div class="line"></div><div class="line">      scriptpath: <span class="string">""</span>		 <span class="comment">// 为boxmode图片自定义路径 ("" =&gt; same script path)</span></div><div class="line"></div><div class="line">      preventmultitouchscrolling: <span class="literal">true</span>	<span class="comment">// 防止多触点事件引发滚动</span></div><div class="line"></div><div class="line">  &#125;);</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+            
+        </div>
+        
+        <div class="article-info article-info-index">
+            
+            
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/js插件/">js插件</a></li></ul>
 	</div>
 
-      
+            
 
-      
-      <div class="clearfix"></div>
+            
+            <p class="article-more-link">
+                <a 
+                   href="/blog/2016/09/11/nicescroll/#more">more >></a>
+            </p>
+            
+            <div class="clearfix"></div>
+        </div>
+        
     </div>
     
-  </div>
-  
 </article>
 
 
@@ -223,59 +234,59 @@
 
 
 
-
-
-
   
-    <article id="post-meta" class="article article-type-post" itemscope itemprop="blogPost">
-  
+    <article id="post-meta" class="article article-type-post" itemscope
+         itemprop="blogPost">
+    
     <div class="article-meta">
-      <a href="/blog/2016/09/10/meta/" class="article-date">
+        <a href="/blog/2016/09/10/meta/" class="article-date">
   	<time datetime="2016-09-10T14:36:54.000Z" itemprop="datePublished">2016-09-10</time>
 </a>
     </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <div class="article-inner">
         
+        <input type="hidden" class="isFancy"/>
+        
+        
+        <header class="article-header">
+            
   
     <h1 itemprop="name">
       <a class="article-title" href="/blog/2016/09/10/meta/">meta的一些使用方法</a>
     </h1>
   
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">'utf-8'</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 优先使用 IE 最新版本和 Chrome --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span>/&gt;</span></div><div class="line"><span class="comment">&lt;!-- 页面描述 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"不超过150个字符"</span>/&gt;</span> </div><div class="line"><span class="comment">&lt;!-- 页面关键词 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">""</span>/&gt;</span></div><div class="line"><span class="comment">&lt;!-- 网页作者 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"author"</span> <span class="attr">content</span>=<span class="string">"name, email@gmail.com"</span>/&gt;</span></div><div class="line"><span class="comment">&lt;!-- 搜索引擎抓取 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"robots"</span> <span class="attr">content</span>=<span class="string">"index,follow"</span>/&gt;</span></div><div class="line"><span class="comment">&lt;!-- 为移动设备添加 viewport --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz --&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- iOS 设备 begin --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-title"</span> <span class="attr">content</span>=<span class="string">"标题"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 添加到主屏后的标题（iOS 6 新增） --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-capable"</span> <span class="attr">content</span>=<span class="string">"yes"</span>/&gt;</span></div><div class="line"><span class="comment">&lt;!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-itunes-app"</span> <span class="attr">content</span>=<span class="string">"app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-status-bar-style"</span> <span class="attr">content</span>=<span class="string">"black"</span>/&gt;</span></div><div class="line"><span class="comment">&lt;!-- 设置苹果工具栏颜色 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"telphone=no, email=no"</span>/&gt;</span></div><div class="line"><span class="comment">&lt;!-- 忽略页面中的数字识别为电话，忽略email识别 --&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 启用360浏览器的极速模式(webkit) --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 避免IE使用兼容模式 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 不让百度转码 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Cache-Control"</span> <span class="attr">content</span>=<span class="string">"no-siteapp"</span>/&gt;</span></div><div class="line"><span class="comment">&lt;!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"HandheldFriendly"</span> <span class="attr">content</span>=<span class="string">"true"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 微软的老式浏览器 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"MobileOptimized"</span> <span class="attr">content</span>=<span class="string">"320"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- uc强制竖屏 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"screen-orientation"</span> <span class="attr">content</span>=<span class="string">"portrait"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- QQ强制竖屏 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"x5-orientation"</span> <span class="attr">content</span>=<span class="string">"portrait"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- UC强制全屏 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"full-screen"</span> <span class="attr">content</span>=<span class="string">"yes"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- QQ强制全屏 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"x5-fullscreen"</span> <span class="attr">content</span>=<span class="string">"true"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- UC应用模式 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"browsermode"</span> <span class="attr">content</span>=<span class="string">"application"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- QQ应用模式 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"x5-page-mode"</span> <span class="attr">content</span>=<span class="string">"app"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- windows phone 点击无高光 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"msapplication-tap-highlight"</span> <span class="attr">content</span>=<span class="string">"no"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- iOS 图标 begin --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"msapplication-TileColor"</span> <span class="attr">content</span>=<span class="string">"#000"</span>/&gt;</span></div><div class="line"><span class="comment">&lt;!-- Windows 8 磁贴颜色 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"msapplication-TileImage"</span> <span class="attr">content</span>=<span class="string">"icon.png"</span>/&gt;</span></div><div class="line"><span class="comment">&lt;!-- Windows 8 磁贴图标 --&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"shortcut icon"</span> <span class="attr">type</span>=<span class="string">"image/ico"</span> <span class="attr">href</span>=<span class="string">"/favicon.ico"</span>/&gt;</span></div><div class="line"><span class="comment">&lt;!-- 添加 favicon icon --&gt;</span></div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+        </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <p>收集了一些meta标签的用法，随时更新中…</p>
+            
+        </div>
+        
+        <div class="article-info article-info-index">
+            
+            
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/css/">css</a></li></ul>
 	</div>
 
-      
+            
 
-      
-      <div class="clearfix"></div>
+            
+            <p class="article-more-link">
+                <a 
+                   href="/blog/2016/09/10/meta/#more">more >></a>
+            </p>
+            
+            <div class="clearfix"></div>
+        </div>
+        
     </div>
     
-  </div>
-  
 </article>
-
-
-
 
 
 
@@ -300,7 +311,6 @@
 
 
 <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
-<script src="/blog/js/mobile.js"></script>
 <script src="/blog/js/main.js"></script>
 
 <script type="text/x-mathjax-config">

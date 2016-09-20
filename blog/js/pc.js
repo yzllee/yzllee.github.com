@@ -1,4 +1,4 @@
-define([], function(){
+(function(){
 
 	var Tips = (function(){
 
@@ -97,4 +97,4 @@ define([], function(){
 			Tips.init();
 		}
 	}
-});
+})();

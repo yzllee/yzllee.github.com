@@ -202,7 +202,7 @@ a {
   display: none;
 }
 #container #mobile-nav .overlay {
-  height: 40px;
+  height: 110px;
   position: absolute;
   width: 100%;
   background: #4d4d4d;
@@ -270,9 +270,6 @@ a {
   #container .mid-col {
     left: 0;
   }
-  #container #header {
-    display: none;
-  }
   #container #header .header-nav {
     position: relative;
   }
@@ -280,7 +277,7 @@ a {
     position: fixed;
     top: -13px;
     width: 100%;
-    color: #ddd;
+    color: #fff;
   }
   #container .overlay .slider-trigger {
     position: absolute;
@@ -619,7 +616,7 @@ a {
   border: 1px solid #aaf;
 }
 #header .header-nav .social a.rss {
-  background: url("/img/rss.png") center no-repeat #ef7522;
+  background: url("/blog/img/rss.png") center no-repeat #ef7522;
   border: 1px solid #ef7522;
 }
 #header .header-nav .social a.rss:hover {
@@ -640,42 +637,42 @@ a {
   border: 1px solid #2d4373;
 }
 #header .header-nav .social a.google {
-  background: url("/img/google.png") center no-repeat #c83d20;
+  background: url("/blog/img/google.png") center no-repeat #c83d20;
   border: 1px solid #c83d20;
 }
 #header .header-nav .social a.google:hover {
   border: 1px solid #9c3019;
 }
 #header .header-nav .social a.twitter {
-  background: url("/img/twitter.png") center no-repeat #55cff8;
+  background: url("/blog/img/twitter.png") center no-repeat #55cff8;
   border: 1px solid #55cff8;
 }
 #header .header-nav .social a.twitter:hover {
   border: 1px solid #24c1f6;
 }
 #header .header-nav .social a.linkedin {
-  background: url("/img/linkedin.png") center no-repeat #005a87;
+  background: url("/blog/img/linkedin.png") center no-repeat #005a87;
   border: 1px solid #005a87;
 }
 #header .header-nav .social a.linkedin:hover {
   border: 1px solid #006b98;
 }
 #header .header-nav .social a.zhihu {
-  background: url("/img/zhihu.png") center no-repeat #0078d8;
+  background: url("/blog/img/zhihu.png") center no-repeat #0078d8;
   border: 1px solid #0078d8;
 }
 #header .header-nav .social a.zhihu:hover {
   border: 1px solid #0078d8;
 }
 #header .header-nav .social a.douban {
-  background: url("/img/douban.png") center no-repeat #06c611;
+  background: url("/blog/img/douban.png") center no-repeat #06c611;
   border: 1px solid #06c611;
 }
 #header .header-nav .social a.douban:hover {
   border: 1px solid #06c611;
 }
 #header .header-nav .social a.mail {
-  background: url("/img/mail.png") center no-repeat #005a87;
+  background: url("/blog/img/mail.png") center no-repeat #005a87;
   border: 1px solid #005a87;
 }
 #header .header-nav .social a.mail:hover {
@@ -1189,6 +1186,33 @@ a {
 }
 #article-nav #article-nav-older {
   float: right;
+}
+.toc-article {
+  background: #eee;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  margin: 1.5em 0 0.3em 1.5em;
+  padding: 1.2em 1em 0 1em;
+  max-width: 28%;
+}
+.toc-title {
+  font-size: 120%;
+}
+#toc {
+  line-height: 1em;
+  font-size: 0.9em;
+  float: right;
+}
+.toc {
+  padding: 0;
+  margin: 1em;
+  line-height: 1.8em;
+}
+li {
+  list-style-type: none;
+}
+.toc-child {
+  margin-left: 1em;
 }
 @-moz-keyframes cd-bounce-1 {
   0% {
@@ -2221,7 +2245,7 @@ pre .css ~ * .id {
 }
 #viewer-box .viewer-box-l {
   background: rgba(20,20,20,0.9);
-  width: 80%;
+  width: 66%;
   height: 100%;
   float: left;
 }
