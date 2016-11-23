@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>弹幕</title>
+    <style media="screen">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+          padding-right:400px;
+          padding-left:200px;
+        }
+
+        .screen {
+            display: inline-block;
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            margin:50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screen span {
+            position: absolute;
+            transition: all 6s linear;
+            display: inline-block;
+            word-break: keep-all;
+            white-space: nowrap;
+        }
+
+        .controller {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="screen"></div>
+        <div class="controller">
+            <input type="text" name="danmu" placeholder="发条弹幕吧~">
+            <button type="button" name="send">发送</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        window.onload = function() {
+            var screen = document.querySelector(".screen");
+            var input = document.querySelector("input");
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function(e) {
+                if (input.value) {
+                    add(input.value);
+                    input.value = '';
+                }
+            })
+
+            function add(value) {
+                var span = document.createElement("span");
+                span.innerHTML = value;
+                span.style.top = Math.random() * 200 + "px";
+                span.style.right = value.length * -18 + "px";
+                screen.appendChild(span);
+                setTimeout(function() {
+                    span.style.right = '110%';
+                }, 200);
+            };
+            var list = ['第一', '前排', 'hhhh', '233333', '笑出声',
+                'hhhhhh', 'hhhh', '233333', '笑出声', '高能', 'hhhhhh',
+                'hhhh', '233333', '笑出声', 'hhhhhh',
+                'hhhh', '233333', '笑出声',
+                'hhhhhh', 'hhhh', '233333', '笑出声', '高能', 'hhhhhh',
+                'hhhh', '233333', '忍住不笑', 'hhhhhh',
+                '结尾打卡'
+            ]
+            var j = -1
+            setInterval(function() {
+                if (j < list.length - 1) {
+                    j = j + 1
+                } else {
+                    return false
+                }
+                add(list[j])
+            }, 1000)
+        }
+    </script>
+</body>
+
+</html>
