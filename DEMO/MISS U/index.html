@@ -1,0 +1,85 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>HAPPY BIRTHDAY!</title>
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+<body>
+
+<div id="mainDiv">
+    <div id="content">
+        <!-- <div id="code">
+            <span class="comments">/**</span><br/>
+            <span class="space"/><span class="comments">*2015-09-02,</span><br/>
+            <span class="space"/><span class="comments">*/</span><br/>
+            Boy name = <span class="keyword">Mr.</span> Mike<br/>
+            Girl name = <span class="keyword">Mrs.</span>yaoyao<br/>
+            <span class="comments">// Fall in love with each other. </span><br/>
+            The boy loves the girl;<br/>
+            The girl loves the boy;<br/>
+            <span class="comments">// AS time goes by.</span><br/>
+            The boy can not leave the girl;<br/>
+            <span class="comments">// At the same time.</span><br/>
+            The girl can not leave the boy;<br/>
+            <span class="keyword">The boy</span> is very <span class="keyword">happy</span>;<br/>
+            <span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br/>
+            <span class="comments">// Whether it is right now</span><br/>
+            <span class="comments">// Or in the near future.</span><br/>
+            The boy always has one dream;<br/>
+            <span class="comments">// The boy wants the girl could be happy forever.</span><br/>
+            <br>
+            <br>
+            I want to say:<br/>
+            Happy Birthday!<br/>
+        </div> -->
+        <div id="loveHeart">
+            <canvas id="garden"></canvas>
+            <div id="words">
+                <div id="messages">
+                    距离我们见面：
+                    <div id="elapseClock"></div>
+                </div>
+                <!-- <div id="loveu">
+                    Forever<br/>
+                    <div class="signature">LOVE</div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var offsetX = $("#loveHeart").width() / 2;
+    var offsetY = $("#loveHeart").height() / 2 - 55;
+    var together = new Date("2016-12-19");
+
+    if (!document.createElement('canvas').getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none");
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+    } else {
+        setTimeout(function () {
+            startHeartAnimation();
+        }, 2000);
+
+        setInterval(function () {
+            timeElapse(together);
+        }, 1000);
+
+        adjustCodePosition();
+        // $("#code").typewriter();
+    }
+</script>
+
+</body>
+</html>
