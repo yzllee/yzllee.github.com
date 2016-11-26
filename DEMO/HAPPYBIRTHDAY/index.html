@@ -57,7 +57,7 @@
     var offsetX = $("#loveHeart").width() / 2;
     var offsetY = $("#loveHeart").height() / 2 - 55;
     var together = new Date();
-    together.setFullYear(2016, 12, 19);
+    together.setFullYear(2016, 12-19, 0);
     together.setHours(0);
     together.setMinutes(0);
     together.setSeconds(0);
@@ -75,7 +75,7 @@
     } else {
         setTimeout(function () {
             startHeartAnimation();
-        }, 5000);
+        }, 2000);
 
         timeElapse(together);
         setInterval(function () {
