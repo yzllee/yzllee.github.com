@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>writing-mode | lyn&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="初识CSS属性：writing-mode
+writing-mode是控制内联元素的显示的，和float属性有些类似，writing-mode可以实现文字竖向的排版。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="writing-mode">
+<meta property="og:url" content="https://yzllee.github.io/blog/2016/12/14/writing-mode/index.html">
+<meta property="og:site_name" content="lyn's blog">
+<meta property="og:description" content="初识CSS属性：writing-mode
+writing-mode是控制内联元素的显示的，和float属性有些类似，writing-mode可以实现文字竖向的排版。">
+<meta property="og:image" content="http://odai7z850.bkt.clouddn.com/img/css/writing-modewriting-mode.png">
+<meta property="og:image" content="http://odai7z850.bkt.clouddn.com/img/css/writing-modewriting-mode1.jpg">
+<meta property="og:updated_time" content="2016-12-14T03:30:14.909Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="writing-mode">
+<meta name="twitter:description" content="初识CSS属性：writing-mode
+writing-mode是控制内联元素的显示的，和float属性有些类似，writing-mode可以实现文字竖向的排版。">
+<meta name="twitter:image" content="http://odai7z850.bkt.clouddn.com/img/css/writing-modewriting-mode.png">
+  
+    <link rel="alternative" href="/atom.xml" title="lyn&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/blog/favicon.ico">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  <script src="/blog/js/jquery-3.0.0.min.js"></script>
+  <script src="/blog/js/pc.js"></script>
+  <script src="/blog/js/mobile.js"></script>
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/blog/css/images/bear.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Lyn</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">咸鱼好吃吗</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/blog/">主页</a></li>
+				        
+							<li><a href="/blog/archives">所有文章</a></li>
+				        
+							<li><a href="/blog/categories/随笔">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/yzllee" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/2647748974" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/blog/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/blog/tags/css/" style="font-size: 10px;">css</a> <a href="/blog/tags/js插件/" style="font-size: 10px;">js插件</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+				
+				<section class="switch-part switch-part3">
+				
+					<div id="js-aboutme">做人没梦想，跟咸鱼有什么区别</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header fixed">Lyn</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img lazy-src="/blog/css/images/bear.jpg" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Lyn</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">咸鱼好吃吗</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/blog/">主页</a></li>
+		        
+					<li><a href="/blog/archives">所有文章</a></li>
+		        
+					<li><a href="/blog/categories/随笔">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/yzllee" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/2647748974" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-writing-mode" class="article article-type-post" itemscope
+         itemprop="blogPost">
+    
+    <div class="article-meta">
+        <a href="/blog/2016/12/14/writing-mode/" class="article-date">
+  	<time datetime="2016-12-14T02:23:33.000Z" itemprop="datePublished">2016-12-14</time>
+</a>
+    </div>
+    
+    <div class="article-inner">
+        
+        <input type="hidden" class="isFancy"/>
+        
+        
+        <header class="article-header">
+            
+  
+    <h1 class="article-title" itemprop="name">
+      writing-mode
+    </h1>
+  
+
+        </header>
+        
+        <div class="article-info article-info-post">
+            
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/CSS/">CSS</a></li></ul>
+	</div>
+
+            
+
+            <div class="clearfix"></div>
+        </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+            <!-- Table of Contents -->
+            
+            <h2 id="初识CSS属性：writing-mode"><a href="#初识CSS属性：writing-mode" class="headerlink" title="初识CSS属性：writing-mode"></a>初识CSS属性：writing-mode</h2><blockquote>
+<p>writing-mode是控制内联元素的显示的，和float属性有些类似，writing-mode可以实现文字竖向的排版。</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="writing-mode语法"><a href="#writing-mode语法" class="headerlink" title="writing-mode语法"></a>writing-mode语法</h3><p>writing-mode有两套语法，一套是IE私有的，一套是CSS规范属性。</p>
+<h4 id="CSS3语法"><a href="#CSS3语法" class="headerlink" title="CSS3语法"></a>CSS3语法</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 关键字值 */</span></div><div class="line"><span class="selector-tag">writing-mode</span>: <span class="selector-tag">horizontal-tb</span>;    <span class="comment">/* 默认值 */</span></div><div class="line"><span class="selector-tag">writing-mode</span>: <span class="selector-tag">vertical-rl</span>;</div><div class="line"><span class="selector-tag">writing-mode</span>: <span class="selector-tag">vertical-lr</span>;</div><div class="line"></div><div class="line"><span class="comment">/* 全局值-关键字 */</span></div><div class="line"><span class="selector-tag">writing-mode</span>: <span class="selector-tag">inherit</span>;</div><div class="line"><span class="selector-tag">writing-mode</span>: <span class="selector-tag">initial</span>;</div><div class="line"><span class="selector-tag">writing-mode</span>: <span class="selector-tag">unset</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>默认值<strong>horizontal-tb</strong>表示文本流是水平方向(horizontal)的，元素是从上往下<strong>(tb:top-bottom)</strong>堆叠的。</li>
+<li><strong>vertical-rl</strong>表示文本是垂直方向(vertical)展示，然后阅读的顺序是从右往左<strong>(rl:right-left)</strong>，跟我们古诗的阅读顺序一致。</li>
+<li><strong>vertical-lr</strong>表示文本是垂直方向(vertical)展示，然后阅读的顺序还是默认的从左往右<strong>(lr:left-right)</strong>，也就是仅仅是水平变垂直。</li>
+</ul>
+<p>下面是各个值下的中英文表现对照（参考自<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode" target="_blank" rel="external">MDN</a>）：<br><img src="http://odai7z850.bkt.clouddn.com/img/css/writing-modewriting-mode.png" alt="对照表"><br><em>使用<strong>text-orientation:upright</strong>可让英文字符竖立，IE不支持，FF和Chrome支持。</em></p>
+<h4 id="IE浏览器语法"><a href="#IE浏览器语法" class="headerlink" title="IE浏览器语法"></a>IE浏览器语法</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-ms-writing-mode: lr-tb | rl-tb | tb-rl | bt-rl | tb-lr | bt-lr | lr-bt | rl-bt | lr | rl | tb</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>lr-tb</strong><br>初始值。内容从左往右(left-right)，从上往下(top-bottom)水平流动，以及下一行水平元素在上一行元素的下面，所有符号都是直立定位。大部分的书写系统都是使用这种布局。</li>
+<li><strong>rl-tb</strong><br>内容从右往左(right-left，从上往下(top-bottom)水平流动，以及下一行水平元素在上一行元素的下面，所有符号都是直立定位。这种布局适合从右往左书写的语言，例如阿拉伯语，希伯来语，塔安那文，和叙利亚语。</li>
+<li><strong>tb-rl</strong><br>内容从上往下(top-bottom)，从右往左(right-left)垂直流动， 下一个垂直行定位于前一个垂直行的左边，全角符号直立定位，非全角符号(也可以被称作窄拉丁文或者窄假名符号)顺时针方向旋转90°。这种布局多见于东亚排版。</li>
+<li><strong>bt-rl</strong><br>内容从下往上(bottom-top)，从右往左(right-left)垂直流动， 下一个垂直行定位于前一个垂直行的左边，全角符号直立定位，非全角符号(也可以被称作窄拉丁文或者窄假名符号)顺时针方向旋转90°。此布局多见于在东亚垂直排版从右往左的文本块上。</li>
+<li><strong>tb-lr</strong><br>IE8+浏览器支持。 内容从上往下(top-bottom)，从左往右(left-right)垂直流动。下一个垂直行在前一个的右边。</li>
+<li><strong>bt-lr</strong><br>IE8+浏览器支持。 内容从下往上(bottom-top)，从左往右(left-right)垂直流动。</li>
+<li><strong>lr-bt</strong><br>IE8+浏览器支持。 内容从下往上(bottom-top)，从左往右(left-right)水平流动。下一个水平行在前一行的上面。</li>
+<li><strong>rl-bt</strong><br>IE8+浏览器支持。内容从下往上(bottom-top)， 从右往左(right-left)水平流动。</li>
+<li><strong>lr</strong><br>IE9+浏览器支持。在SVG和HTML元素上使用。等同于<strong>lr-tb</strong>.</li>
+<li><strong>rl</strong><br>IE9+浏览器支持。在SVG和HTML元素上使用。等同于<strong>rl-tb</strong>.</li>
+<li><strong>tb</strong><br>IE9+浏览器支持。在SVG和HTML元素上使用。等同于<strong>tb-rl</strong>.</li>
+</ul>
+<p>各个属性值的表现如下（参考自<a href="https://msdn.microsoft.com/en-us/library/ms531187%28v=vs.85%29.aspx" target="_blank" rel="external">微软</a>）<br><img src="http://odai7z850.bkt.clouddn.com/img/css/writing-modewriting-mode1.jpg" alt="对照表"></p>
+<blockquote>
+<p>参考：<br><a href="http://www.zhangxinxu.com/wordpress/?p=5352" target="_blank" rel="external">改变CSS世界纵横规则的writing-mode属性</a></p>
+</blockquote>
+
+            
+        </div>
+        
+    </div>
+    
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2016/09/11/nicescroll/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用nicescroll自定义滚动条</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+    
+</article>
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Lyn
+    	</div>
+        <div class="footer-right">
+            <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/blog/js/main.js"></script>
+
+<script type="text/x-mathjax-config;executed=true">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+
+</script>
+<script>
+    eval(function (p, a, c, k, e, d) {
+        e = function (c) {
+            return c.toString(36)
+        };
+        if (!''.replace(/^/, String)) {
+            while (c--) {
+                d[c.toString(a)] = k[c] || c.toString(a)
+            }
+            k = [function (e) {
+                return d[e]
+            }];
+            e = function () {
+                return '\\w+'
+            };
+            c = 1
+        }
+        ;
+        while (c--) {
+            if (k[c]) {
+                p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+            }
+        }
+        return p
+    }('g(0).h(e(){e d(){0.9=0[b]?"别离开，快回来！":a}f b,c,a=0.9;"2"!=4 0.8?(b="8",c="k"):"2"!=4 0.5?(b="5",c="j"):"2"!=4 0.6&&(b="6",c="l"),("2"!=4 0.7||"2"!=4 0[b])&&0.7(c,d,!1)});', 22, 22, 'document||undefined||typeof|mozHidden|webkitHidden|addEventListener|hidden|title|||||function|var|jQuery|ready|Hi|mozvisibilitychange|visibilitychange|webkitvisibilitychange'.split('|'), 0, {}))
+</script>
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
