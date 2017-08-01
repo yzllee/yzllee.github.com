@@ -1,3 +1,5 @@
-# MYONLINE
+# 博客
 
-－首页动态文字取自（  https://github.com/livoras/home/blob/gh-pages/gen.js  ）。
+使用`hexo`生成的静态`blog`。
+
+    主题:https://github.com/pinggod/hexo-theme-apollo
