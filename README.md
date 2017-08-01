@@ -8,4 +8,4 @@
 
 ## 参考  
 
-主题:https://github.com/pinggod/hexo-theme-apollo
+主题:[apollo](https://github.com/pinggod/hexo-theme-apollo)
