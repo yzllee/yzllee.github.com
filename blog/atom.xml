@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://yzllee.github.io/blog/"/>
-  <updated>2017-08-01T08:26:14.000Z</updated>
+  <updated>2017-08-01T08:22:17.000Z</updated>
   <id>https://yzllee.github.io/blog/</id>
   
   <author>
@@ -14,28 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Directive</title>
-    <link href="https://yzllee.github.io/blog/2017/08/01/Directive/"/>
-    <id>https://yzllee.github.io/blog/2017/08/01/Directive/</id>
-    <published>2017-08-01T08:17:34.000Z</published>
-    <updated>2017-08-01T08:26:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>Angular</code>自定义组件<code>directive</code>的用法。</p>
-<a id="more"></a>  
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;code&gt;Angular&lt;/code&gt;自定义组件&lt;code&gt;directive&lt;/code&gt;的用法。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="angular" scheme="https://yzllee.github.io/blog/tags/angular/"/>
-    
-  </entry>
   
   <entry>
     <title>writing-mode</title>
