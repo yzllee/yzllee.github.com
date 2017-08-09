@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://yzllee.github.io/blog/"/>
-  <updated>2017-08-04T10:20:07.000Z</updated>
+  <updated>2017-08-09T09:55:48.000Z</updated>
   <id>https://yzllee.github.io/blog/</id>
   
   <author>
@@ -16,11 +16,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自建SS</title>
+    <link href="https://yzllee.github.io/blog/2017/04/09/Shadowsockets/"/>
+    <id>https://yzllee.github.io/blog/2017/04/09/Shadowsockets/</id>
+    <published>2017-04-09T09:36:21.000Z</published>
+    <updated>2017-08-09T09:55:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录一次自建SS的过程。</p>
+<a id="more"></a>
+<h2 id="选择服务器"><a href="#选择服务器" class="headerlink" title="选择服务器"></a>选择服务器</h2><p>购买了vultr的服务器（centos 7），5刀/月，<a href="http://www.vultr.com/?ref=7174412" target="_blank" rel="external">购买链接</a>，对于新用户购买友好，有钱送。</p>
+<h2 id="部署SS"><a href="#部署SS" class="headerlink" title="部署SS"></a>部署SS</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 一键部署SS代码</span></div><div class="line">yum -y install wget</div><div class="line">wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.sh</div><div class="line">chmod +x shadowsocks-libev.sh</div><div class="line">./shadowsocks-libev.sh 2&gt;&amp;1 | tee shadowsocks-libev.log</div><div class="line"></div><div class="line"><span class="comment"># 等待执行 </span></div><div class="line"><span class="comment"># /...按步骤依次输入</span></div><div class="line"><span class="comment"># Your Server IP: 输入服务器IP</span></div><div class="line"><span class="comment"># Your Server Port: 端口号，任意填</span></div><div class="line"><span class="comment"># Your Password: 密码</span></div><div class="line"><span class="comment"># Your Local IP: 127.0.0.1</span></div><div class="line"><span class="comment"># Your Local Port: 1080</span></div><div class="line"><span class="comment"># Your Encryption Method: 加密方式</span></div></pre></td></tr></table></figure>
+<p><code>若部署失败或卡在某个位置，重启服务器后重连，再次部署。</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一次自建SS的过程。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="ss" scheme="https://yzllee.github.io/blog/tags/ss/"/>
+    
+  </entry>
+  
+  <entry>
     <title>个性化shell终端折腾</title>
-    <link href="https://yzllee.github.io/blog/2017/08/04/shell/"/>
-    <id>https://yzllee.github.io/blog/2017/08/04/shell/</id>
-    <published>2017-08-04T08:05:32.000Z</published>
-    <updated>2017-08-04T10:20:07.000Z</updated>
+    <link href="https://yzllee.github.io/blog/2017/03/04/shell/"/>
+    <id>https://yzllee.github.io/blog/2017/03/04/shell/</id>
+    <published>2017-03-04T08:05:32.000Z</published>
+    <updated>2017-08-09T09:37:14.000Z</updated>
     
     <content type="html"><![CDATA[<p>在MAC环境下自定义shell终端的配色方案。<br>iterm2 + oh my zsh</p>
 <a id="more"></a>
