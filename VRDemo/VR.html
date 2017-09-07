@@ -13,32 +13,10 @@
 
     <!-- 骨架 -->
     <a-scene>
-        <!-- 由于网络请求会对渲染的性能产生负面影响，
-            所以可以预加载纹理以保证资源被下载完成前不进行渲染工作，
-            预加载可以通过资源管理系统（asset management system）来完成。 -->
         <a-assets>
-            <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
-            <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
-            <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-            <img id="ljz" src="http://odai7z850.bkt.clouddn.com/full.jpg">
             <img id="hz" src="http://odai7z850.bkt.clouddn.com/hzhz">
-            <img id="img1" src="https://raw.githubusercontent.com/aframevr/aframe/v0.6.0/examples/boilerplate/panorama/puydesancy.jpg">
         </a-assets>
-        <!-- 创建圆柱和曲线表面 -->
-        <!-- 添加文理 -->
-        <!-- <a-cylinder id="ground" src="#groundTexture" radius="32" height="0.1"></a-cylinder> -->
-        <!-- <a-cylinder id="ground" src="https://cdn.aframe.io/a-painter/images/floor.jpg" radius="32" height="0.1"></a-cylinder> -->
-
-        <!-- 添加一个 360° 的背景 -->
-        <!-- <a-sky> 是一个在内部粘贴材质的巨大 3D 球体 -->
-        <!-- <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky> -->
         <a-sky src="#hz" rotation="0 -110 0"></a-sky>
-
-        <!-- 创造盒子，方块或者墙壁 -->
-        <!-- <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2"> -->
-            <!-- 动画效果 -->
-            <!-- <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000" repeat="indefinite"></a-animation> -->
-        <!-- </a-box> -->
 
     </a-scene>
 </body>

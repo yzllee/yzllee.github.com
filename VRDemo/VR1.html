@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VR</title>
+</head>
+
+<body>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+    <!-- 骨架 -->
+    <a-scene>
+        <a-assets>
+            <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+            <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+            <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
+        </a-assets>
+        <a-cylinder id="ground" src="#groundTexture" radius="32" height="0.1"></a-cylinder>
+        <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
+        <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
+            <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+        </a-box>
+
+    </a-scene>
+</body>
+
+</html>
