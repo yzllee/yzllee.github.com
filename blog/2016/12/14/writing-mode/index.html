@@ -9,7 +9,7 @@
 <li><strong>vertical-rl</strong>表示文本是垂直方向(vertical)展示，然后阅读的顺序是从右往左<strong>(rl:right-left)</strong>，跟我们古诗的阅读顺序一致。</li>
 <li><strong>vertical-lr</strong>表示文本是垂直方向(vertical)展示，然后阅读的顺序还是默认的从左往右<strong>(lr:left-right)</strong>，也就是仅仅是水平变垂直。</li>
 </ul>
-<p>下面是各个值下的中英文表现对照（参考自<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode" target="_blank" rel="external">MDN</a>）：<br><img src="http://odai7z850.bkt.clouddn.com/img/css/writing-modewriting-mode.png" alt="对照表"><br><em>使用<strong>text-orientation:upright</strong>可让英文字符竖立，IE不支持，FF和Chrome支持。</em></p>
+<p>下面是各个值下的中英文表现对照（参考自<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode" target="_blank" rel="external">MDN</a>）：<br><img src="http://image.lynth.cn/img/writingmode/writing-mode.png" alt="对照表"><br><em>使用<strong>text-orientation:upright</strong>可让英文字符竖立，IE不支持，FF和Chrome支持。</em></p>
 <h4 id="IE浏览器语法"><a href="#IE浏览器语法" class="headerlink" title="IE浏览器语法"></a>IE浏览器语法</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-ms-writing-mode: lr-tb | rl-tb | tb-rl | bt-rl | tb-lr | bt-lr | lr-bt | rl-bt | lr | rl | tb</div></pre></td></tr></table></figure>
 <ul>
 <li><strong>lr-tb</strong><br>初始值。内容从左往右(left-right)，从上往下(top-bottom)水平流动，以及下一行水平元素在上一行元素的下面，所有符号都是直立定位。大部分的书写系统都是使用这种布局。</li>
@@ -24,7 +24,7 @@
 <li><strong>rl</strong><br>IE9+浏览器支持。在SVG和HTML元素上使用。等同于<strong>rl-tb</strong>.</li>
 <li><strong>tb</strong><br>IE9+浏览器支持。在SVG和HTML元素上使用。等同于<strong>tb-rl</strong>.</li>
 </ul>
-<p>各个属性值的表现如下（参考自<a href="https://msdn.microsoft.com/en-us/library/ms531187%28v=vs.85%29.aspx" target="_blank" rel="external">微软</a>）<br><img src="http://odai7z850.bkt.clouddn.com/img/css/writing-modewriting-mode1.jpg" alt="对照表"></p>
+<p>各个属性值的表现如下（参考自<a href="https://msdn.microsoft.com/en-us/library/ms531187%28v=vs.85%29.aspx" target="_blank" rel="external">微软</a>）<br><img src="http://image.lynth.cn/img/writingmode/writing-mode1.jpg" alt="对照表"></p>
 <blockquote>
 <p>参考：<br><a href="http://www.zhangxinxu.com/wordpress/?p=5352" target="_blank" rel="external">改变CSS世界纵横规则的writing-mode属性</a></p>
 </blockquote>

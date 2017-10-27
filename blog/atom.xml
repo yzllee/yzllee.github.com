@@ -45,7 +45,7 @@
     <link href="https://yzllee.github.io/blog/2017/03/04/shell/"/>
     <id>https://yzllee.github.io/blog/2017/03/04/shell/</id>
     <published>2017-03-04T08:05:32.000Z</published>
-    <updated>2017-08-09T09:37:14.000Z</updated>
+    <updated>2017-10-27T06:05:03.000Z</updated>
     
     <content type="html"><![CDATA[<p>在MAC环境下自定义shell终端的配色方案。<br>iterm2 + oh my zsh</p>
 <a id="more"></a>
@@ -59,7 +59,7 @@
 <h2 id="设置主题"><a href="#设置主题" class="headerlink" title="设置主题"></a>设置主题</h2><p>使用主题 <a href="https://github.com/fcamblor/oh-my-zsh-agnoster-fcamblor" target="_blank" rel="external">agnoster</a>。   </p>
 <h4 id="此款主题需要字体"><a href="#此款主题需要字体" class="headerlink" title="此款主题需要字体"></a>此款主题需要字体</h4><p><a href="https://github.com/powerline/fonts" target="_blank" rel="external">下载地址</a>  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#更改配置文件</span></div><div class="line">vi ~/.zshrc</div><div class="line"><span class="comment">#写入</span></div><div class="line">ZSH_THEME=<span class="string">"agnoster"</span></div></pre></td></tr></table></figure>
-<h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><p><img src="http://odai7z850.bkt.clouddn.com/zsh.png" alt="on-my-zsh"><br><img src="http://odai7z850.bkt.clouddn.com/zsh2.png" alt="on-my-zsh"></p>
+<h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><p><img src="http://image.lynth.cn/img/shell/zsh.png" alt="on-my-zsh"><br><img src="http://image.lynth.cn/img/shell/zsh1.png" alt="on-my-zsh"></p>
 <blockquote>
 <p>参考：<br><a href="http://www.vpsee.com/2013/09/use-the-solarized-color-theme-on-mac-os-x-terminal/" target="_blank" rel="external">在 Mac OS X 终端里使用 Solarized 配色方案</a><br><a href="http://www.jianshu.com/p/7de00c73a2bb" target="_blank" rel="external">iTerm 2 &amp;&amp; Oh My Zsh【DIY教程——亲身体验过程】</a><br><a href="http://www.jianshu.com/p/e4973be9c9fb" target="_blank" rel="external">Mac下iTerm 2语法高亮配置及附带美化</a></p>
 </blockquote>
@@ -81,7 +81,7 @@
     <link href="https://yzllee.github.io/blog/2016/12/14/writing-mode/"/>
     <id>https://yzllee.github.io/blog/2016/12/14/writing-mode/</id>
     <published>2016-12-13T16:00:00.000Z</published>
-    <updated>2017-08-01T08:22:17.000Z</updated>
+    <updated>2017-10-27T06:03:40.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="初识CSS属性：writing-mode"><a href="#初识CSS属性：writing-mode" class="headerlink" title="初识CSS属性：writing-mode"></a>初识CSS属性：<code>writing-mode</code></h2><blockquote>
 <p>writing-mode是控制内联元素的显示的，和float属性有些类似，writing-mode可以实现文字竖向的排版。</p>
@@ -94,7 +94,7 @@
 <li><strong>vertical-rl</strong>表示文本是垂直方向(vertical)展示，然后阅读的顺序是从右往左<strong>(rl:right-left)</strong>，跟我们古诗的阅读顺序一致。</li>
 <li><strong>vertical-lr</strong>表示文本是垂直方向(vertical)展示，然后阅读的顺序还是默认的从左往右<strong>(lr:left-right)</strong>，也就是仅仅是水平变垂直。</li>
 </ul>
-<p>下面是各个值下的中英文表现对照（参考自<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode" target="_blank" rel="external">MDN</a>）：<br><img src="http://odai7z850.bkt.clouddn.com/img/css/writing-modewriting-mode.png" alt="对照表"><br><em>使用<strong>text-orientation:upright</strong>可让英文字符竖立，IE不支持，FF和Chrome支持。</em></p>
+<p>下面是各个值下的中英文表现对照（参考自<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode" target="_blank" rel="external">MDN</a>）：<br><img src="http://image.lynth.cn/img/writingmode/writing-mode.png" alt="对照表"><br><em>使用<strong>text-orientation:upright</strong>可让英文字符竖立，IE不支持，FF和Chrome支持。</em></p>
 <h4 id="IE浏览器语法"><a href="#IE浏览器语法" class="headerlink" title="IE浏览器语法"></a>IE浏览器语法</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-ms-writing-mode: lr-tb | rl-tb | tb-rl | bt-rl | tb-lr | bt-lr | lr-bt | rl-bt | lr | rl | tb</div></pre></td></tr></table></figure>
 <ul>
 <li><strong>lr-tb</strong><br>初始值。内容从左往右(left-right)，从上往下(top-bottom)水平流动，以及下一行水平元素在上一行元素的下面，所有符号都是直立定位。大部分的书写系统都是使用这种布局。</li>
@@ -109,7 +109,7 @@
 <li><strong>rl</strong><br>IE9+浏览器支持。在SVG和HTML元素上使用。等同于<strong>rl-tb</strong>.</li>
 <li><strong>tb</strong><br>IE9+浏览器支持。在SVG和HTML元素上使用。等同于<strong>tb-rl</strong>.</li>
 </ul>
-<p>各个属性值的表现如下（参考自<a href="https://msdn.microsoft.com/en-us/library/ms531187%28v=vs.85%29.aspx" target="_blank" rel="external">微软</a>）<br><img src="http://odai7z850.bkt.clouddn.com/img/css/writing-modewriting-mode1.jpg" alt="对照表"></p>
+<p>各个属性值的表现如下（参考自<a href="https://msdn.microsoft.com/en-us/library/ms531187%28v=vs.85%29.aspx" target="_blank" rel="external">微软</a>）<br><img src="http://image.lynth.cn/img/writingmode/writing-mode1.jpg" alt="对照表"></p>
 <blockquote>
 <p>参考：<br><a href="http://www.zhangxinxu.com/wordpress/?p=5352" target="_blank" rel="external">改变CSS世界纵横规则的writing-mode属性</a></p>
 </blockquote>
