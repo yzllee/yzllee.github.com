@@ -8,7 +8,7 @@
 <p><strong>堆（heap）</strong>：基于树抽象数据类型的一种特殊数据结构。</p>
 <p><strong>栈（stack）</strong>: 栈是遵循后进先出 (LIFO) 原则的有序集合。JavaScript 是单线程的也主要体现在这，因为一个线程只有一个调用栈。调用栈也是有深度限制的，当你写了一个无线递归函数时，浏览器会抛出错误警告（Uncaught RangeError: Maximum call stack size exceeded）。</p>
 <p><strong>队列（queue</strong>）:  队列是遵循先进先出 (FIFO) 原则的有序集合。</p>
-<p>观察一下浏览器中的Event Loop执行模型：<br><img src="/images/EventLoop.png" alt="Loop"></p>
+<p>观察一下浏览器中的Event Loop执行模型：<br><img src="/blog/images/EventLoop.png" alt="Loop"></p>
 <p>如图可知，JavaScript 中分为 <strong>堆内存</strong> 和 <strong>栈内存</strong>。</p>
 <p>JavaScript 中的引用数据类型的大小是不固定的，所以它们就储存在堆内存中。JavaScript 不允许直接访问堆内存中的位置，所以也不能直接去操作它的内存空间，而是操作 <strong>对象的引用</strong>。引用数据类型（ 对象(Object) ）的指针储存在栈内存中，该指针指向了堆内存中该实体的起始地址。顺带一提，当形成闭包的时候，实际上作用域链也是保存到了堆中。</p>
 <p>JavaScript 中的基本数据类型就储存在栈内存中，它们占用的大小和空间固定，是直接 <strong>按值来访问</strong> 的。</p>
@@ -50,7 +50,7 @@
 </li>
 </ol>
 <p>下面是根据我理解的事件循环进程模型画出来的示意图。  </p>
-<p><img src="/images/Process.png" alt="Process">  </p>
+<p><img src="/blog/images/Process.png" alt="Process">  </p>
 <p>用文字描述可以解释为：所有的同步任务都会在执行栈立即执行然后出栈，异步任务会进入到异步任务处理模块，然后把异步任务结果放到任务队列中。当执行栈中所有同步任务执行完以后就会去检查任务列队，如果任务队列为空，就会去检查微任务队列，如果有微任务就一次执行完所有的微任务。循环进行 <strong>任务入栈执行任务</strong>，<strong>栈为空</strong>，<strong>检查任务队列</strong> 的步骤，这个过程不断重复，这就是事件循环。</p>
 <p><strong>总结：1.宏任务队列每执行完一个任务就会去检查微任务队列。2.微任务队列中的任务会按照顺序一次执行完成（微任务执行产生的微任务会被加入到队尾，在这个周期被执行），直至微任务队列为空。</strong>  </p>
 <h4 id="宏任务与微任务"><a href="#宏任务与微任务" class="headerlink" title="宏任务与微任务"></a>宏任务与微任务</h4><p>宏任务：script(整体代码)、setTimeout、setInterval、I/O、事件、postMessage、 MessageChannel、setImmediate (Node.js)</p>
